@@ -1,0 +1,291 @@
+@import "../Animation.scss";
+@import "../Variable.scss";
+
+#overview {
+  padding-top: 140px;
+  padding-bottom: 40px;
+
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+
+  margin: auto;
+
+  .overview__container {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .overview__text {
+
+      margin: 0 250px 40px 0;
+
+      .overview__about-us {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        .overview__about-us-box {
+          position: relative;
+
+          width: 90px;
+
+          .overview__number {
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            color: $title__text__box;
+            font-size: 16px;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        .overview__about-us-title {
+          color: $title__text__box;
+          font-size: 20px;
+          padding-left: 20px;
+
+          text-transform: uppercase;
+        }
+      }
+
+      .overview__title {
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        font-weight: 100;
+        color: $title__color;
+
+        margin-bottom: 20px;
+
+        overflow: hidden;
+
+        h1.to_animate {
+          animation: text_animate_bottom_to_center 2s ease forwards;
+        }
+      }
+
+      .overview__content {
+        font-size: 20px;
+        line-height: 1.7;
+        letter-spacing: 1px;
+        color: $text__color;
+
+        margin-bottom: 20px;
+
+        overflow: hidden;
+
+        p.to_animate {
+          animation: text_animate_bottom_to_center 2s ease forwards;
+        }
+      }
+
+      .overview__to-about-us {
+
+        display: flex;
+        align-items: center;
+
+        font-size: 18px;
+        text-decoration: none;
+        color: $title__color;
+        font-weight: 400;
+
+        &:hover .overview__to-about-us-icon {
+          background-color: #000;
+          color: #fff;
+        }
+
+        .overview__to-about-us-icon {
+          margin-left: 10px;
+          font-size: 50px;
+
+          background-color: $icon__next__page__color;
+
+          border-radius: 50%;
+
+          transition: 0.5s;
+        }
+      }
+    }
+
+    .overview__desc {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+
+      .overview__desc-his-year {
+        width: 50%;
+        height: 100%;
+
+        overflow: hidden;
+
+        transform: translateY(20%);
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 0 7%;
+        span {
+          font-size: 300px;
+          color: $title__text__box;
+
+          &.to_animate {
+            animation: text_animate_top_to_center 0.5s ease forwards;
+          }
+        }
+
+        .overview__desc-his-content {
+          transform: translateY(-80%);
+          text-align: center;
+
+          overflow: hidden;
+
+          .overview__desc-his-year-title {
+            padding-bottom: 10px;
+            color: $title__color;
+            font-size: 24px;
+
+            &.to_animate {
+              animation: text_animate_top_to_center 2s ease forwards;
+            }
+          }
+
+          .overview__desc-his-year-text {
+            color: $text__color;
+
+            &.to_animate {
+            animation: text_animate_bottom_to_center 2s ease forwards;
+            }
+          }
+        }
+      }
+
+      .overview__desc-info {
+        width: 50%;
+        padding-top: 50px;
+        padding-left: 100px;
+
+        border-left: 1px solid $title__text__box;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .overview__managers,
+        .overview__members {
+          padding-bottom: 100px;
+        }
+
+        .overview__number-members ,
+        .overview__number-managers ,
+        .overview__number-offices {
+          font-size: 70px;
+          color: $title__text__box;
+          height: 100%;
+          width: 100%;
+          
+          p.to_animate {
+            animation: text_animate_top_to_center 0.5s ease forwards;
+          }
+        }
+
+        .overview__managers,
+        .overview__members,
+        .overview__offices {
+          
+          height: 100%;
+          width: 100%;
+
+          overflow: hidden;
+        }
+
+        .overview__title-managers p,
+        .overview__title-members p,
+        .overview__title-offices p {
+          font-size: 24px;
+          padding-bottom: 10px;
+          color: $title__color;
+
+          &.to_animate {
+            animation: text_animate_left_to_center 2s ease forwards;
+          }
+        }
+
+        .overview__info-managers p,
+        .overview__info-members p,
+        .overview__info-offices p {
+          color: $text__color;
+
+          &.to_animate { 
+            animation: text_animate_left_to_center 2s ease forwards;
+          }
+        }
+
+        .overview__desc-time {
+          padding-top: 20px;
+          color: $title__text__box;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:1024px) {
+  #overview {
+    
+    .overview__container {
+      
+      .overview__text {
+        margin: 0 0 40px 0;
+  
+        .overview__desc-info {
+          padding-left: 60px;
+          
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:768px) {
+  #overview {
+    
+    .overview__container {
+    
+      .overview__text {
+        
+        .overview__title {
+          font-size: 28px;
+        }
+  
+        .overview__content {
+          font-size: 18px;
+        }
+      }
+
+      .overview__desc {
+        
+        justify-content: space-between;
+        .overview__desc-his-year {
+          width: 100%;
+          transform: translate(0);
+        }
+  
+        .overview__desc-info {
+          width: 100%;
+          border: none;
+          padding: 0;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}

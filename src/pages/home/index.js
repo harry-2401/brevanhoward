@@ -1,15 +1,28 @@
-import React, { Fragment } from 'react';
-import HeroSection from '../../components/HeroSection';
-import heroImg from "../../img/hero.jpg";
-// data hero section
-const heroTitle = ["macro & derivatives", "excellence"]; // data title
-const srcHeroImg = heroImg; // src image
-
+import React, { Fragment } from "react";
+import HeroSection from "../../components/HeroSection";
+import OverView from "../../components/OverView";
+import { homeData } from "./HomeData";
 
 function Home(props) {
   return (
     <Fragment>
-      <HeroSection heroTitle={heroTitle} srcImg={srcHeroImg}/>
+      <HeroSection heroTitle={homeData.heroTitle} srcImg={homeData.srcHeroImg} />
+      <OverView
+        overviewTitle={homeData.overviewTitle}
+        overviewContent={homeData.overviewContent}
+        yearHistory={homeData.yearHistory}
+        numberOfMembers={homeData.numberOfMembers}
+        memberTitle={homeData.memberTitle}
+        memberContent={homeData.memberContent}
+        numberOfManagers={homeData.numberOfManagers}
+        managerTitle={homeData.managerTitle}
+        managerContent={homeData.managerContent}
+        numberOfOffices={homeData.numberOfOffices}
+        officesTitle={homeData.officesTitle}
+        officesContent={homeData.officesContent}
+        time={homeData.timeOverview}
+      />  
+
     </Fragment>
   );
 }

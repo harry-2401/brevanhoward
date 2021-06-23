@@ -3,7 +3,16 @@ import { Link as LinkS } from "react-scroll";
 import { CgArrowLongDown} from "react-icons/cg";
 import { useInView } from 'react-intersection-observer';
 import { THRESHOLD } from "../../OptionAnimation";
+import PropTypes from "prop-types";
 import "./HeroSection.scss";
+
+HeroSection.propTypes = {
+  title: PropTypes.array,
+};
+
+HeroSection.PropsDefault = {
+  title: [],
+}
 
 function HeroSection(props) {
   const [ref, inView] = useInView({
