@@ -1,12 +1,16 @@
 import React, { Fragment } from "react";
 import HeroSection from "../../components/HeroSection";
+import Investment from "../../components/Investment";
 import OverView from "../../components/OverView";
 import { homeData } from "./HomeData";
 
-function Home(props) {
+function Home() {
   return (
     <Fragment>
-      <HeroSection heroTitle={homeData.heroTitle} srcImg={homeData.srcHeroImg} />
+      <HeroSection
+        heroTitle={homeData.heroTitle}
+        srcImg={homeData.srcHeroImg}
+      />
       <OverView
         overviewTitle={homeData.overviewTitle}
         overviewContent={homeData.overviewContent}
@@ -21,8 +25,13 @@ function Home(props) {
         officesTitle={homeData.officesTitle}
         officesContent={homeData.officesContent}
         time={homeData.timeOverview}
-      />  
-
+      />
+      <Investment
+        title={homeData.investmentTitle}
+        content={homeData.investmentContent}
+        srcImg={homeData.srcInvestmentImg}
+      />
+      
     </Fragment>
   );
 }

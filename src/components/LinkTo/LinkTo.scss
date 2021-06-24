@@ -1,0 +1,31 @@
+@import "../Variable.scss";
+
+.linkTo-wrap {
+  display: flex;
+  align-items: center;
+
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 400;
+  .linkTo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover .linkTo-icon {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .linkTo-icon {
+    margin-left: 10px;
+    font-size: 50px;
+
+    background-color: $icon__next__page__color;
+
+    border-radius: 50%; 
+
+    transition: 0.5s;
+  }
+}

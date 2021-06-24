@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { RiArrowDropRightFill } from "react-icons/ri";
 import "./OverView.scss";
 import { useInView } from "react-intersection-observer";
 import { THRESHOLD } from "../../OptionAnimation";
 import CountUp from "react-countup";
+import LinkTo from "../LinkTo";
 
 OverView.propTypes = {
   overviewTitle: PropTypes.string,
@@ -65,19 +64,20 @@ function OverView(props) {
             </div>
 
             <div className="overview__title">
-              <h1 className={inView ? "to_animate" : ""}>{props.overviewTitle}</h1>
+              <h1 className={inView ? "to_animate" : ""}>
+                {props.overviewTitle}
+              </h1>
             </div>
 
             <div className="overview__content">
-              <p className={inView ? "to_animate" : ""}>{props.overviewContent}</p>
+              <p className={inView ? "to_animate" : ""}>
+                {props.overviewContent}
+              </p>
             </div>
 
-            <div className="overview__to-about-us">
-              <Link to="/about-us" className="overview__to-about-us">
-                More Details
-                <RiArrowDropRightFill className="overview__to-about-us-icon" />
-              </Link>
-            </div>
+            <LinkTo linkTo="/about-us" text="text">
+              More Details
+            </LinkTo>
           </div>
 
           <div className="overview__desc">
@@ -90,8 +90,22 @@ function OverView(props) {
                 )}
               </span>
               <div className="overview__desc-his-content">
-                <p className={inView ? "overview__desc-his-year-title to_animate" : "overview__desc-his-year-title"}>Year History</p>
-                <p className={inView ? "overview__desc-his-year-text to_animate" : "overview__desc-his-year-text"}>
+                <p
+                  className={
+                    inView
+                      ? "overview__desc-his-year-title to_animate"
+                      : "overview__desc-his-year-title"
+                  }
+                >
+                  Year History
+                </p>
+                <p
+                  className={
+                    inView
+                      ? "overview__desc-his-year-text to_animate"
+                      : "overview__desc-his-year-text"
+                  }
+                >
                   Investing in global markets, refining and improving our
                   investment processes and delivering results for our clients.
                 </p>
@@ -116,11 +130,16 @@ function OverView(props) {
                 </span>
 
                 <span className="overview__title-members">
-                  <p className={inView ? "to_animate" : ""}> {props.memberTitle}</p>
+                  <p className={inView ? "to_animate" : ""}>
+                    {" "}
+                    {props.memberTitle}
+                  </p>
                 </span>
 
                 <span className="overview__info-members">
-                  <p className={inView ? "to_animate" : ""}>{props.memberContent}</p>
+                  <p className={inView ? "to_animate" : ""}>
+                    {props.memberContent}
+                  </p>
                 </span>
               </div>
 
@@ -141,11 +160,15 @@ function OverView(props) {
                 </span>
 
                 <span className="overview__title-managers">
-                  <p className={inView ? "to_animate" : ""}>{props.managerTitle}</p>
+                  <p className={inView ? "to_animate" : ""}>
+                    {props.managerTitle}
+                  </p>
                 </span>
 
                 <span className="overview__info-managers">
-                  <p className={inView ? "to_animate" : ""}>{props.managerContent}</p>
+                  <p className={inView ? "to_animate" : ""}>
+                    {props.managerContent}
+                  </p>
                 </span>
               </div>
 
@@ -166,11 +189,15 @@ function OverView(props) {
                 </span>
 
                 <span className="overview__title-offices">
-                  <p className={inView ? "to_animate" : ""}>{props.officesTitle}</p>
+                  <p className={inView ? "to_animate" : ""}>
+                    {props.officesTitle}
+                  </p>
                 </span>
 
                 <span className="overview__info-offices">
-                  <p className={inView ? "to_animate" : ""}>{props.officesContent}</p>
+                  <p className={inView ? "to_animate" : ""}>
+                    {props.officesContent}
+                  </p>
                 </span>
               </div>
 

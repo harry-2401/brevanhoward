@@ -1,4 +1,5 @@
 import heroImg from "../../img/hero.jpg";
+import investmentImg from "../../img/investmentImg.jpg";
 
 export const homeData = {
   //hero data
@@ -22,4 +23,11 @@ export const homeData = {
   officesContent:
     "Located in key regions to serve our global client base and access unique talent pools.",
   timeOverview: "As of March 31, 2021",
+  //Investment section data
+  investmentTitle: "Investment Approach",
+  investmentContent: [
+    "Our investment approach combines directional, relative value and derivative trading strategies designed to deliver orthogonal but complementary returns across a broad range of investment solutions.",
+    "We differentiate our investment process via our three core pillars of expertise in macro thinking, trade structuring and risk management.",
+  ],
+  srcInvestmentImg: investmentImg,
 };
