@@ -44,7 +44,7 @@
           transform: translateY(-100%);
 
           &.to_animate {
-            animation: text_animate_bottom_to_center 2s ease forwards;
+            animation: text_animate_bottom_to_center 2s ease-in-out forwards;
           }
           .overview__about-us-box {
             position: relative;
@@ -89,7 +89,7 @@
         overflow: hidden;
 
         h1.to_animate {
-          animation: text_animate_bottom_to_center 2s ease forwards;
+          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
         }
       }
 
@@ -106,7 +106,7 @@
         margin-bottom: 40px;
 
         p.to_animate {
-          animation: text_animate_bottom_to_center 2s ease forwards;
+          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
         }
       }
 
@@ -167,7 +167,7 @@
           transform: translateY(-100%);
 
           &.to_animate {
-            animation: text_animate_top_to_center 0.5s ease forwards;
+            animation: text_animate_top_to_center 0.5s ease-in-out forwards;
           }
         }
 
@@ -184,7 +184,7 @@
             transform: translateY(100%);
 
             &.to_animate {
-              animation: text_animate_top_to_center 2s ease forwards;
+              animation: text_animate_top_to_center 2s ease-in-out forwards;
             }
           }
 
@@ -193,7 +193,7 @@
             transform: translateY(-100%);
 
             &.to_animate {
-            animation: text_animate_bottom_to_center 2s ease forwards;
+            animation: text_animate_bottom_to_center 2s ease-in-out forwards;
             }
           }
         }
@@ -228,7 +228,7 @@
           }
           
           p.to_animate {
-            animation: text_animate_top_to_center 0.5s ease forwards;
+            animation: text_animate_top_to_center 0.5s ease-in-out forwards;
           }
         }
 
@@ -251,7 +251,7 @@
           transform: translateX(-100%);
 
           &.to_animate {
-            animation: text_animate_left_to_center 2s ease forwards;
+            animation: text_animate_left_to_center 2s ease-in-out forwards;
           }
         }
 
@@ -262,7 +262,7 @@
           transform: translateX(-100%);
 
           &.to_animate { 
-            animation: text_animate_left_to_center 2s ease forwards;
+            animation: text_animate_left_to_center 2s ease-in-out forwards;
           }
         }
 

@@ -17,7 +17,7 @@
     transform: translateX(-100%);
 
     &.to_animate {
-      animation: text_animate_bottom_to_center 2s ease forwards;
+      animation: text_animate_bottom_to_center 2s ease-in-out forwards;
     }
   }
 

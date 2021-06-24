@@ -125,6 +125,7 @@
 @keyframes img_animate_left_to_center {
   0% {
     width: 0;
+    top: 0;
     left: 0;
   }
   30% {
@@ -134,12 +135,14 @@
   100% {
     width: 0;
     left: 100%;
+    top: 0;
   }
 }
 
 @keyframes img_animate_right_to_center {
   0% {
     width: 0;
+    top: 0;
     right: 0;
   }
   30% {
@@ -149,6 +152,7 @@
   100% {
     width: 0;
     right: 100%;
+    top: 0;
   }
 }
 
