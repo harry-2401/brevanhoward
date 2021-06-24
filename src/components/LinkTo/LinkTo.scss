@@ -1,4 +1,5 @@
 @import "../Variable.scss";
+@import "../Animation";
 
 .linkTo-wrap {
   display: flex;
@@ -7,10 +8,17 @@
   font-size: 18px;
   text-decoration: none;
   font-weight: 400;
+
+  overflow: hidden;
   .linkTo {
     text-decoration: none;
     display: flex;
     align-items: center;
+    transform: translateX(-100%);
+
+    &.to_animate {
+      animation: text_animate_bottom_to_center 2s ease forwards;
+    }
   }
 
   &:hover .linkTo-icon {

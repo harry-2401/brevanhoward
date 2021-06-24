@@ -6,7 +6,7 @@ import { THRESHOLD } from "../../OptionAnimation";
 import CountUp from "react-countup";
 import LinkTo from "../LinkTo";
 
-OverView.propTypes = {
+OverViewSection.propTypes = {
   overviewTitle: PropTypes.string,
   overviewContent: PropTypes.string,
   yearHistory: PropTypes.number,
@@ -22,7 +22,7 @@ OverView.propTypes = {
   time: PropTypes.string,
 };
 
-OverView.PropsDefault = {
+OverViewSection.PropsDefault = {
   overviewTitle: "",
   overviewContent: "",
   yearHistory: 0,
@@ -38,7 +38,7 @@ OverView.PropsDefault = {
   time: "",
 };
 
-function OverView(props) {
+function OverViewSection(props) {
   const [ref, inView] = useInView({
     threshold: THRESHOLD,
   });
@@ -49,18 +49,26 @@ function OverView(props) {
         <div className="overview__container">
           <div className="overview__text">
             <div className="overview__about-us">
-              <div className="overview__about-us-box">
-                <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
-                  <path
-                    d="M13.5629 13.5629L45 0.541196L76.4371 13.5629L89.4588 45L76.4371 76.4371L45 89.4588L13.5629 76.4371L0.541196 45L13.5629 13.5629Z"
-                    stroke="#ECE9E5"
-                  ></path>
-                </svg>
+              <div
+                className={
+                  inView
+                    ? "overview__about-us-wrap to_animate"
+                    : "overview__about-us-wrap"
+                }
+              >
+                <div className="overview__about-us-box">
+                  <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+                    <path
+                      d="M13.5629 13.5629L45 0.541196L76.4371 13.5629L89.4588 45L76.4371 76.4371L45 89.4588L13.5629 76.4371L0.541196 45L13.5629 13.5629Z"
+                      stroke="#ECE9E5"
+                    ></path>
+                  </svg>
 
-                <span className="overview__number">01</span>
+                  <span className="overview__number">01</span>
+                </div>
+
+                <span className="overview__about-us-title">About us</span>
               </div>
-
-              <span className="overview__about-us-title">About us</span>
             </div>
 
             <div className="overview__title">
@@ -75,9 +83,15 @@ function OverView(props) {
               </p>
             </div>
 
-            <LinkTo linkTo="/about-us" text="text">
-              More Details
-            </LinkTo>
+            <div className="overview__linkTo">
+              <LinkTo
+                animate={inView ? true : false}
+                linkTo="/about-us"
+                text="text"
+              >
+                More Details
+              </LinkTo>
+            </div>
           </div>
 
           <div className="overview__desc">
@@ -210,4 +224,4 @@ function OverView(props) {
   );
 }
 
-export default OverView;
+export default OverViewSection;

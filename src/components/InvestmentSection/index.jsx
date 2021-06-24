@@ -4,17 +4,17 @@ import "./Investment.scss";
 import LinkTo from "../LinkTo";
 import { useInView } from "react-intersection-observer";
 import { THRESHOLD } from "../../OptionAnimation";
-Investment.propTypes = {
+InvestmentSection.propTypes = {
   title: PropTypes.string,
   content: PropTypes.array,
 };
 
-Investment.PropsDefault = {
+InvestmentSection.PropsDefault = {
   title: "",
   content: ["", ""],
 };
 
-function Investment(props) {
+function InvestmentSection(props) {
   const [ref, inView] = useInView({
     threshold: THRESHOLD,
   });
@@ -40,7 +40,7 @@ function Investment(props) {
               <span>{props.content[1]}</span>
             </div>
 
-            <LinkTo linkTo="/about-us" text="text">
+            <LinkTo animate={inView ? true : false} linkTo="/about-us" text="text">
               More Details
             </LinkTo>
           </div>
@@ -65,4 +65,4 @@ function Investment(props) {
   );
 }
 
-export default Investment;
+export default InvestmentSection;

@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import HeroSection from "../../components/HeroSection";
-import Investment from "../../components/Investment";
-import OverView from "../../components/OverView";
+import InvestmentSection from "../../components/InvestmentSection";
+import OverViewSection from "../../components/OverViewSection";
+import RemarkSection from "../../components/RemarkSection";
 import { homeData } from "./HomeData";
 
 function Home() {
@@ -11,7 +12,7 @@ function Home() {
         heroTitle={homeData.heroTitle}
         srcImg={homeData.srcHeroImg}
       />
-      <OverView
+      <OverViewSection
         overviewTitle={homeData.overviewTitle}
         overviewContent={homeData.overviewContent}
         yearHistory={homeData.yearHistory}
@@ -26,12 +27,17 @@ function Home() {
         officesContent={homeData.officesContent}
         time={homeData.timeOverview}
       />
-      <Investment
+      <InvestmentSection
         title={homeData.investmentTitle}
         content={homeData.investmentContent}
         srcImg={homeData.srcInvestmentImg}
       />
-      
+      <RemarkSection
+        title={homeData.remarkTitle}
+        mainTitle={homeData.remarkMainTitle}
+        mainText={homeData.remarkMainText}
+        srcImg={homeData.srcRemarkImg}
+      />
     </Fragment>
   );
 }

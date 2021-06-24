@@ -133,7 +133,6 @@
       display: none;
     }
     .investment__container {
-    
       .investment__text-wrap {
         padding-right: 50px;
 
@@ -165,6 +164,21 @@
 
       .investment__img-wrap {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #investment {
+    
+    .investment__container {
+    
+      .investment__text-wrap {
+
+        .investment__text-title {
+          font-size: 35px;
+        }
       }
     }
   }

@@ -128,11 +128,37 @@
     left: 0;
   }
   30% {
-    width: 100%;
+    width: 101%;
     left: 0;
   }
   100% {
     width: 0;
     left: 100%;
+  }
+}
+
+@keyframes img_animate_right_to_center {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  30% {
+    width: 101%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+
+@keyframes zoom_in_svg {
+  from {
+    transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }

@@ -1,5 +1,6 @@
 import heroImg from "../../img/hero.jpg";
 import investmentImg from "../../img/investmentImg.jpg";
+import remarkImg from "../../img/remarkBackground.jpg";
 
 export const homeData = {
   //hero data
@@ -30,4 +31,16 @@ export const homeData = {
     "We differentiate our investment process via our three core pillars of expertise in macro thinking, trade structuring and risk management.",
   ],
   srcInvestmentImg: investmentImg,
+  //HallMark section data
+  remarkTitle: "at a glance",
+  remarkMainTitle: "Hallmarks of Brevan Howard",
+  remarkMainText: [
+    ["Extraordinary", "People"],
+    ["Best-in-Class", "Technology"],
+    ["Diversified Investment", "Products"],
+    ["Outstanding", "Macro Analysis"],
+    ["Structuring", "Expertise"],
+    ["Excellence in", "Risk Management"],
+  ],
+  srcRemarkImg: remarkImg,
 };
