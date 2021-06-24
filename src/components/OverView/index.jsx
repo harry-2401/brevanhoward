@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { RiArrowDropRightFill } from "react-icons/ri";
@@ -44,10 +44,6 @@ function OverView(props) {
     threshold: THRESHOLD,
   });
 
-  useEffect(() => {
-    console.log(inView);
-  });
-
   return (
     <Fragment>
       <section id="overview" ref={ref}>
@@ -69,11 +65,11 @@ function OverView(props) {
             </div>
 
             <div className="overview__title">
-              <h1 class={inView ? "to_animate" : ""}>{props.overviewTitle}</h1>
+              <h1 className={inView ? "to_animate" : ""}>{props.overviewTitle}</h1>
             </div>
 
             <div className="overview__content">
-              <p class={inView ? "to_animate" : ""}>{props.overviewContent}</p>
+              <p className={inView ? "to_animate" : ""}>{props.overviewContent}</p>
             </div>
 
             <div className="overview__to-about-us">
@@ -86,15 +82,15 @@ function OverView(props) {
 
           <div className="overview__desc">
             <div className="overview__desc-his-year">
-              <span class={inView ? "to_animate" : ""}>
+              <span className={inView ? "to_animate" : ""}>
                 {inView ? (
                   <CountUp start={0} end={props.yearHistory} duration={3} />
                 ) : (
-                  0
+                  props.yearHistory
                 )}
               </span>
               <div className="overview__desc-his-content">
-                <p class={inView ? "overview__desc-his-year-title to_animate" : "overview__desc-his-year-title"}>Year History</p>
+                <p className={inView ? "overview__desc-his-year-title to_animate" : "overview__desc-his-year-title"}>Year History</p>
                 <p className={inView ? "overview__desc-his-year-text to_animate" : "overview__desc-his-year-text"}>
                   Investing in global markets, refining and improving our
                   investment processes and delivering results for our clients.
@@ -105,7 +101,7 @@ function OverView(props) {
             <div className="overview__desc-info">
               <div className="overview__members">
                 <span className="overview__number-members">
-                  <p class={inView ? "to_animate" : ""}>
+                  <p className={inView ? "to_animate" : ""}>
                     {inView ? (
                       <CountUp
                         start={0}
@@ -113,24 +109,24 @@ function OverView(props) {
                         duration={3}
                       />
                     ) : (
-                      0
+                      props.numberOfMembers
                     )}
                     +
                   </p>
                 </span>
 
                 <span className="overview__title-members">
-                  <p class={inView ? "to_animate" : ""}> {props.memberTitle}</p>
+                  <p className={inView ? "to_animate" : ""}> {props.memberTitle}</p>
                 </span>
 
                 <span className="overview__info-members">
-                  <p class={inView ? "to_animate" : ""}>{props.memberContent}</p>
+                  <p className={inView ? "to_animate" : ""}>{props.memberContent}</p>
                 </span>
               </div>
 
               <div className="overview__managers">
                 <span className="overview__number-managers">
-                  <p class={inView ? "to_animate" : ""}>
+                  <p className={inView ? "to_animate" : ""}>
                     {inView ? (
                       <CountUp
                         start={0}
@@ -138,24 +134,24 @@ function OverView(props) {
                         duration={3}
                       />
                     ) : (
-                      0
+                      props.numberOfManagers
                     )}
                     +
                   </p>
                 </span>
 
                 <span className="overview__title-managers">
-                  <p class={inView ? "to_animate" : ""}>{props.managerTitle}</p>
+                  <p className={inView ? "to_animate" : ""}>{props.managerTitle}</p>
                 </span>
 
                 <span className="overview__info-managers">
-                  <p class={inView ? "to_animate" : ""}>{props.managerContent}</p>
+                  <p className={inView ? "to_animate" : ""}>{props.managerContent}</p>
                 </span>
               </div>
 
               <div className="overview__offices">
                 <span className="overview__number-offices">
-                  <p class={inView ? "to_animate" : ""}>
+                  <p className={inView ? "to_animate" : ""}>
                     {inView ? (
                       <CountUp
                         start={0}
@@ -163,18 +159,18 @@ function OverView(props) {
                         duration={3}
                       />
                     ) : (
-                      0
+                      props.numberOfOffices
                     )}
                     +
                   </p>
                 </span>
 
                 <span className="overview__title-offices">
-                  <p class={inView ? "to_animate" : ""}>{props.officesTitle}</p>
+                  <p className={inView ? "to_animate" : ""}>{props.officesTitle}</p>
                 </span>
 
                 <span className="overview__info-offices">
-                  <p class={inView ? "to_animate" : ""}>{props.officesContent}</p>
+                  <p className={inView ? "to_animate" : ""}>{props.officesContent}</p>
                 </span>
               </div>
 

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaAngleRight, FaBars } from "react-icons/fa";
 import { VscChromeClose } from "react-icons/vsc";
 import "./NavBar.scss";
@@ -36,34 +36,34 @@ function Header() {
             <div className="header__nav">
               <ul className="header__nav-list">
                 <li className="header__nav-item" onClick={closeMobileMenu}>
-                  <Link to="/about-us" className="header__nav-link">
+                  <NavLink activeClassName="active" to="/about-us" className="header__nav-link">
                     About Us
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="header__nav-item" onClick={closeMobileMenu}>
-                  <Link to="/culture" className="header__nav-link">
+                  <NavLink activeClassName="active" to="/culture" className="header__nav-link">
                     Culture
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li className="header__nav-item" onClick={closeMobileMenu}>
-                  <Link to="/careers" className="header__nav-link">
+                  <NavLink activeClassName="active" to="/careers" className="header__nav-link">
                     Careers
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li className="header__nav-item" onClick={closeMobileMenu}>
-                  <Link to="/contact" className="header__nav-link">
+                  <NavLink activeClassName="active" to="/contact" className="header__nav-link">
                     Contact
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
 
             <div className="header__login" onClick={closeMobileMenu}>
-              <Link className="header__login-link" to="/login">
+              <NavLink activeClassName="active" className="header__login-link" to="/login">
                 Login
-              </Link>
+              </NavLink>
               <FaAngleRight className="header__login-icon" />
             </div>
           </div>
