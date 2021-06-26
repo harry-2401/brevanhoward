@@ -1,16 +1,18 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header";
+import AboutUs from "./pages/about";
 import Home from "./pages/home";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Header/>
       <Switch>
-        <Route to="/" exact component={Home}/>
+        <Route path="/" exact component={Home}/>
+        <Route path="/about-us" component={AboutUs}/>
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 }
 

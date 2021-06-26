@@ -15,11 +15,11 @@
 
 @keyframes hero_animation_mobile {
   0% {
-    width: 110%;
+    width: 100%;
     height: 0;
   }
   50% {
-    width: 110%;
+    width: 100%;
     height: 100%;
   }
   100% {
@@ -110,11 +110,11 @@
 @keyframes img_animate_scale {
   0% {
     opacity: 0;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   30% {
     opacity: 0;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   100% {
     opacity: 1;
@@ -144,15 +144,18 @@
     width: 0;
     top: 0;
     right: 0;
+    height: 100%;
   }
   30% {
     width: 101%;
     right: 0;
+    height: 100%;
   }
   100% {
     width: 0;
     right: 100%;
     top: 0;
+    height: 100%;
   }
 }
 

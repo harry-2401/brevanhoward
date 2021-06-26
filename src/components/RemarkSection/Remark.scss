@@ -19,7 +19,7 @@
     top: 0;
     right: 0;
 
-    background-color: #fff;
+    background-color: rgb(246,245,242);
 
     height: 140px;
     width: 50%;
@@ -68,17 +68,17 @@
         }
         .remark__title-box {
           position: relative;
-  
+
           width: 90px;
           height: 90px;
-  
+
           .remark__title-box-number {
             position: absolute;
             top: 50%;
             left: 50%;
-  
+
             transform: translate(-50%, -50%);
-  
+
             color: $title__text__box;
             font-size: 16px;
           }
@@ -112,7 +112,7 @@
 
         span {
           display: block;
-          transform: translateY(-100%);
+          transform: translateY(100%);
 
           &.to_animate {
             animation: text_animate_bottom_to_center 2s ease-in-out forwards;
@@ -129,7 +129,7 @@
           width: calc(100% / 3);
           padding: 45px 25px 0 25px;
           margin-bottom: 25px;
-          
+
           display: flex;
           align-items: center;
           flex-direction: column;
@@ -153,7 +153,7 @@
               top: 50%;
               left: 50%;
 
-              transform: translate(-50%, -50%); 
+              transform: translate(-50%, -50%);
             }
           }
 
@@ -178,32 +178,21 @@
   }
 }
 
-@media screen and (max-width:1024px) {
-  
+@media screen and (max-width: 1024px) {
   #remark {
-    .remark__background {
-      display: none;
-    }
-
-    background-color: rgb(20,28,37);
     .remark__container {
-
       .remark__main {
-    
         .remark__main-title {
           font-size: 60px;
         }
 
         .remark__main-box-wrap {
-          
           .remark__main-box-wrapper {
             width: calc(100% / 2);
 
             .remark__main-box-text-wrap {
-              
               .remark__main-box-text {
                 font-size: 28px;
-                
               }
             }
           }
@@ -213,33 +202,32 @@
   }
 }
 
-@media screen and (max-width:768px) {
-  
+@media screen and (max-width: 768px) {
   #remark {
     padding-top: 50px;
+    .remark__background {
+      display: none;
+    }
+
+    background: rgb(20, 28, 37);
 
     &::before {
       display: none;
     }
 
     .remark__container {
-
       .remark__main {
-    
         .remark__main-title {
           font-size: 35px;
         }
 
         .remark__main-box-wrap {
-          
           .remark__main-box-wrapper {
             width: 100%;
 
             .remark__main-box-text-wrap {
-              
               .remark__main-box-text {
                 font-size: 24px;
-                
               }
             }
           }

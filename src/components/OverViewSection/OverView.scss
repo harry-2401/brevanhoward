@@ -11,6 +11,8 @@
   display: flex;
   justify-content: center;
 
+  overflow: hidden;
+
   .overview__container {
     width: 100%;
     max-width: 1400px;
@@ -164,7 +166,7 @@
         span {
           font-size: 300px;
           color: $title__text__box;
-          transform: translateY(-100%);
+          transform: translateY(100%);
 
           &.to_animate {
             animation: text_animate_top_to_center 0.5s ease-in-out forwards;

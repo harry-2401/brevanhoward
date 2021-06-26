@@ -13,6 +13,8 @@
 
   position: relative;
 
+  overflow: hidden;
+
   &::before {
     content: "";
 
@@ -54,7 +56,7 @@
 
         span {
           display: block;
-          transform: translateY(100%);
+          transform: translateY(-100%);
           &.to_animate {
             animation: text_animate_top_to_center 2s ease-in-out forwards;
           }
@@ -72,7 +74,7 @@
         overflow: hidden;
 
         span {
-          transform: translateY(-100%);
+          transform: translateY(100%);
         }
 
         &.to_animate span {

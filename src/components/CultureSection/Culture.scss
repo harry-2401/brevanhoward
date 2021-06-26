@@ -1,0 +1,233 @@
+@import "../Animation";
+@import "../Variable";
+
+#culture {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 140px;
+  padding-bottom: 40px;
+
+  background-color: #fff;
+
+  .culture__container {
+    width: 100%;
+    max-width: 1400px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 5%;
+    margin-right: 5%;
+
+    .culture__title-box-wrap {
+      overflow: hidden;
+      width: 100%;
+
+      margin-bottom: 80px;
+
+      .culture__title {
+        display: flex;
+        align-items: center;
+
+        transform: translateY(-100%);
+        &.to_animate {
+          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+        }
+
+        .culture__title-box {
+          width: 90px;
+
+          position: relative;
+
+          .culture__title-box-number {
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            color: $title__text__box;
+          }
+        }
+
+        .culture__title-text {
+          padding-left: 20px;
+
+          font-size: 18px;
+
+          text-transform: uppercase;
+
+          color: $title__text__box;
+
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    .culture__main {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      .culture__main-title {
+        width: 100%;
+
+        margin-bottom: 40px;
+
+        font-size: 90px;
+
+        color: $title__color;
+
+        overflow: hidden;
+
+        span {
+          display: block;
+          transform: translateY(100%);
+        }
+
+        span.to_animate {
+          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+        }
+      }
+
+      .culture__main-content-wrap {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        .culture__main-text {
+          font-size: 20px;
+
+          color: $text__color;
+
+          margin-bottom: 30px;
+
+          letter-spacing: 1px;
+          line-height: 1.7;
+
+          width: 100%;
+
+          overflow: hidden;
+
+          p {
+            transform: translateY(-100%);
+          }
+
+          p.to_animate {
+            animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+          }
+        }
+
+        .culture__main-first-content {
+          width: 50%;
+          padding-right: 5%;
+        }
+
+        .culture__main-second-content {
+          width: 50%;
+          padding-left: 5%;
+
+          margin-bottom: 80px;
+        }
+
+        .culture__main-third-content {
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+
+          .overlay {
+            position: absolute;
+            top: 0;
+
+            height: 100%;
+
+            background-color: rgb(236, 233, 229);
+
+            z-index: 1;
+
+            &.to_animate {
+              animation: img_animate_left_to_center 2s ease-in-out forwards;
+            }
+          }
+
+          img {
+            width: 100%;
+            opacity: 0;
+
+            &.to_animate {
+              animation: img_animate_scale 2s ease-in-out forwards;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:1024px) {
+  #culture {
+    padding-top: 100px;
+
+    .culture__container {
+      .culture__main {
+        .culture__main-title {
+          font-size: 60px;
+        }
+
+        .culture__main-content-wrap {
+          .culture__main-text {
+            font-size: 18px;
+          }
+
+          .culture__main-first-content {
+            width: 50%;
+            padding-right: 5%;
+          }
+
+          .culture__main-second-content {
+            width: 50%;
+            padding-left: 5%;
+
+            margin-bottom: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:768px) {
+  #culture {
+    padding-top: 100px;
+
+    .culture__container {
+      .culture__main {
+        .culture__main-title {
+          font-size: 40px;
+        }
+
+        .culture__main-content-wrap {
+          .culture__main-text {
+            font-size: 18px;
+          }
+
+          .culture__main-first-content {
+            width: 100%;
+            padding: 0;
+          }
+
+          .culture__main-second-content {
+            width: 100%;
+            padding: 0;
+
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
