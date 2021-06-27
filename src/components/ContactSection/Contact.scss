@@ -1,0 +1,167 @@
+@import "../Animation";
+@import "../Variable";
+
+#contact {
+  width: 100%;
+
+  padding: 140px 0;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  .contact__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+
+    z-index: -1;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .contact__container {
+    width: 100%;
+    max-width: 1400px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 5%;
+    margin-right: 5%;
+
+    z-index: 1;
+
+    .contact__title-box-wrap {
+      overflow: hidden;
+      width: 100%;
+
+      margin-bottom: 80px;
+
+      .contact__title {
+        display: flex;
+        align-items: center;
+
+        transform: translateY(-100%);
+        &.to_animate {
+          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+        }
+
+        .contact__title-box {
+          width: 90px;
+
+          position: relative;
+
+          .contact__title-box-number {
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            color: $title__text__box;
+          }
+        }
+
+        .contact__title-text {
+          padding-left: 20px;
+
+          font-size: 18px;
+
+          text-transform: uppercase;
+
+          color: $title__text__box;
+
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    .contact__main {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      .contact__main-title-wrap {
+        overflow: hidden;
+
+        .contact__title {
+          font-size: 90px;
+          letter-spacing: 7px;
+          padding-bottom: 20px;
+          color: #fff;
+          overflow: hidden;
+
+          span {
+            display: block;
+            transform: translateY(100%);
+
+            &.to_animate {
+              animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+            }
+          }
+        }
+
+        .linkTo-wrap {
+          .linkTo-icon {
+            color: #000;
+          }
+
+          &:hover .linkTo-icon {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:1024px) {
+  #contact {
+
+    
+    .contact__container {
+      .contact__main {
+        .contact__main-title-wrap {
+          .contact__title {
+            font-size: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:768px) {
+  #contact {
+    
+    padding: 20px 0;
+    .contact__container {
+      .contact__title-box-wrap {
+       
+
+        margin-bottom: 10px;
+      }
+      .contact__main {
+        .contact__main-title-wrap {
+          .contact__title {
+            font-size: 30px;
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}

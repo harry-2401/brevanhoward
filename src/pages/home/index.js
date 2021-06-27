@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import CareersSection from "../../components/CareersSection";
+import ContactSection from "../../components/ContactSection";
 import CultureSection from "../../components/CultureSection";
 import HeroSection from "../../components/HeroSection";
 import InvestmentSection from "../../components/InvestmentSection";
@@ -52,7 +53,11 @@ function Home() {
         mainText={homeData.careersMainText}
         srcImg={homeData.srcCareersImg}
       />
-
+      <ContactSection
+        title={homeData.contactTitle}
+        mainTitle={homeData.contactMainTitle}
+        srcImg={homeData.srcContactImg}
+      />
     </Fragment>
   );
 }

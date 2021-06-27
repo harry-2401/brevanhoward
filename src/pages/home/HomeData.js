@@ -4,6 +4,7 @@ import remarkImg from "../../img/remarkBackground.jpg";
 import cultureImg from "../../img/culture2.jpg";
 import careersImg1 from "../../img/careers1.jpg";
 import careersImg2 from "../../img/careers2.jpg";
+import contactImg from "../../img/contactBackground.jpg";
 
 export const homeData = {
   //hero data
@@ -59,6 +60,11 @@ export const homeData = {
   //careers section data
   careersTitle: "careers",
   careersMainTitle: "Working at Brevan Howard",
-  careersMainText: "We are always looking for exceptional talent to join our global community. We look for individuals who are intellectually curious, passionate and share our mission and principles.",
+  careersMainText:
+    "We are always looking for exceptional talent to join our global community. We look for individuals who are intellectually curious, passionate and share our mission and principles.",
   srcCareersImg: [careersImg1, careersImg2],
+  //contact section data
+  contactTitle: "contact & locations",
+  contactMainTitle: ["Partner", "With Us"],
+  srcContactImg: contactImg,
 };
