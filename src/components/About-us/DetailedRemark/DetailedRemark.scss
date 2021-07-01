@@ -1,0 +1,219 @@
+@import "../../Animation";
+@import "../../Variable";
+
+#detailed-remark {
+  margin: 180px 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -180px;
+    width: 100%;
+    height: 180px;
+    background-color: rgb(33, 41, 62);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    bottom: -180px;
+    width: 100%;
+    height: 180px;
+    background-color: rgb(33, 41, 62);
+  }
+
+  .detailed-remark__background {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .detailed-remark__container {
+    width: 100%;
+    max-width: 1400px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 5%;
+
+    .detailed-remark__title-wrap {
+      width: 100%;
+      margin-bottom: 65px;
+      overflow: hidden;
+
+      .detailed-remark__title {
+        display: block;
+        font-size: 90px;
+        color: #fff;
+
+        letter-spacing: 3px;
+        line-height: 1.7;
+
+        transform: translateY(100%);
+
+        &.to_animate {
+          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+        }
+      }
+    }
+
+    .detailed-remark__main-container {
+      width: 100%;
+      display: flex;
+      margin-bottom: 100px;
+      flex-wrap: wrap;
+
+      .detailed-remark__main-content-wrap {
+        width: calc(100% / 3);
+        padding: 50px 40px;
+
+        overflow: hidden;
+
+        .detailed-remark__main-content {
+          width: 100%;
+          transform: translateY(100%);
+
+          &.to_animate {
+            animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+          }
+
+          .detailed-remark__main-icon-wrap {
+            margin-bottom: 20px;
+          }
+
+          .detailed-remark__main-title-wrap {
+            margin-bottom: 20px;
+            font-size: 22px;
+            letter-spacing: 1px;
+            line-height: 1.7;
+            color: $title__text__box;
+          }
+
+          .detailed-remark__main-text-wrap {
+            font-size: 18px;
+            color: #fff;
+            letter-spacing: 1px;
+            line-height: 1.7;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1024px) {
+  #detailed-remark {
+    margin: 100px 0;
+
+    &::before {
+      height: 100px;
+      top: -100px;
+    }
+
+    &::after {
+      height: 100px;
+      bottom: -100px;
+    }
+
+    .detailed-remark__container {
+      .detailed-remark__title-wrap {
+        width: 100%;
+        margin-bottom: 40px;
+
+        .detailed-remark__title {
+          font-size: 50px;
+        }
+      }
+
+      .detailed-remark__main-container {
+        width: 100%;
+        margin-bottom: 0;
+
+        .detailed-remark__main-content-wrap {
+          width: calc(100% / 3);
+          padding: 20px;
+
+          .detailed-remark__main-icon-wrap {
+            margin-bottom: 15px;
+          }
+
+          .detailed-remark__main-title-wrap {
+            margin-bottom: 15px;
+            font-size: 18px;
+          }
+
+          .detailed-remark__main-text-wrap {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  #detailed-remark {
+    margin: 100px 0;
+    background-color: rgb(33, 41, 62);
+
+    &::before {
+      height: 100px;
+      top: -100px;
+    }
+
+    &::after {
+      height: 100px;
+      bottom: -100px;
+    }
+
+    .detailed-remark__background {
+      display: none;
+    }
+
+    .detailed-remark__container {
+      .detailed-remark__title-wrap {
+        width: 100%;
+        margin-bottom: 40px;
+
+        .detailed-remark__title {
+          font-size: 35px;
+        }
+      }
+
+      .detailed-remark__main-container {
+        .detailed-remark__main-content-wrap {
+          width: 100%;
+          padding: 0;
+          margin-bottom: 50px;
+
+          .detailed-remark__main-icon-wrap {
+            margin-bottom: 10px;
+          }
+
+          .detailed-remark__main-title-wrap {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
