@@ -29,56 +29,6 @@
 
       margin: 0 250px 40px 0;
 
-      .overview__about-us {
-        margin-bottom: 80px;
-
-        display: flex;
-
-        align-items: center;
-
-        width: 100%;
-
-        overflow: hidden;
-
-        .overview__about-us-wrap {
-          display: flex;
-          align-items: center;
-          transform: translateY(-100%);
-
-          &.to_animate {
-            animation: text_animate_bottom_to_center 2s ease-in-out forwards;
-          }
-          .overview__about-us-box {
-            position: relative;
-  
-            width: 90px;
-            height: 90px;
-
-            
-  
-            .overview__number {
-              position: absolute;
-  
-              top: 50%;
-              left: 50%;
-  
-              color: $title__text__box;
-              font-size: 16px;
-              transform: translate(-50%, -50%);
-            }
-
-          }
-        }
-
-        .overview__about-us-title {
-          color: $title__text__box;
-          font-size: 18px;
-          padding-left: 20px;
-
-          text-transform: uppercase;
-        }
-      }
-
       .overview__title {
         font-size: 50px;
         text-transform: uppercase;
@@ -91,7 +41,7 @@
         overflow: hidden;
 
         h1.to_animate {
-          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+          animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
         }
       }
 
@@ -108,7 +58,7 @@
         margin-bottom: 40px;
 
         p.to_animate {
-          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+          animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
         }
       }
 
@@ -117,7 +67,6 @@
       }
 
       .overview__to-about-us {
-
         display: flex;
         align-items: center;
 
@@ -186,7 +135,7 @@
             transform: translateY(100%);
 
             &.to_animate {
-              animation: text_animate_top_to_center 2s ease-in-out forwards;
+              animation: text_animate_top_to_center 1.5s ease-in-out forwards;
             }
           }
 
@@ -195,7 +144,7 @@
             transform: translateY(-100%);
 
             &.to_animate {
-            animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+              animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
             }
           }
         }
@@ -217,8 +166,8 @@
           padding-bottom: 100px;
         }
 
-        .overview__number-members ,
-        .overview__number-managers ,
+        .overview__number-members,
+        .overview__number-managers,
         .overview__number-offices {
           font-size: 70px;
           color: $title__text__box;
@@ -228,7 +177,7 @@
           p {
             transform: translateY(100%);
           }
-          
+
           p.to_animate {
             animation: text_animate_top_to_center 0.5s ease-in-out forwards;
           }
@@ -237,7 +186,6 @@
         .overview__managers,
         .overview__members,
         .overview__offices {
-          
           height: 100%;
           width: 100%;
 
@@ -253,7 +201,7 @@
           transform: translateX(-100%);
 
           &.to_animate {
-            animation: text_animate_left_to_center 2s ease-in-out forwards;
+            animation: text_animate_left_to_center 1.5s ease-in-out forwards;
           }
         }
 
@@ -263,8 +211,8 @@
           color: $text__color;
           transform: translateX(-100%);
 
-          &.to_animate { 
-            animation: text_animate_left_to_center 2s ease-in-out forwards;
+          &.to_animate {
+            animation: text_animate_left_to_center 1.5s ease-in-out forwards;
           }
         }
 
@@ -279,9 +227,7 @@
 
 @media screen and(max-width:1024px) {
   #overview {
-    
     .overview__container {
-      
       .overview__text {
         margin: 0 0 40px 0;
 
@@ -292,10 +238,9 @@
         .overview__content {
           font-size: 18px;
         }
-  
+
         .overview__desc-info {
           padding-left: 60px;
-          
         }
       }
     }
@@ -304,26 +249,22 @@
 
 @media screen and(max-width:768px) {
   #overview {
-    
     .overview__container {
-    
       .overview__text {
-
         .overview__about-us {
           margin-bottom: 40px;
         }
-        
+
         .overview__title {
           font-size: 28px;
         }
-  
+
         .overview__content {
           font-size: 18px;
         }
       }
 
       .overview__desc {
-        
         justify-content: space-between;
         .overview__desc-his-year {
           width: 100%;
@@ -333,7 +274,7 @@
             transform: translateY(-60%);
           }
         }
-  
+
         .overview__desc-info {
           width: 100%;
           border: none;

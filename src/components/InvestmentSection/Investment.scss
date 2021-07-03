@@ -24,7 +24,7 @@
 
     width: 50%;
     height: 140px;
-    
+
     right: 0;
     top: 0;
   }
@@ -58,7 +58,7 @@
           display: block;
           transform: translateY(-100%);
           &.to_animate {
-            animation: text_animate_top_to_center 2s ease-in-out forwards;
+            animation: text_animate_top_to_center 1.5s ease-in-out forwards;
           }
         }
       }
@@ -68,7 +68,7 @@
         line-height: 1.7;
         letter-spacing: 1px;
         color: $text__color;
-        
+
         margin-bottom: 40px;
 
         overflow: hidden;
@@ -78,7 +78,7 @@
         }
 
         &.to_animate span {
-          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+          animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
         }
 
         span {
@@ -97,7 +97,6 @@
 
         position: relative;
         overflow: hidden;
-        
 
         .overlay {
           position: absolute;
@@ -110,7 +109,7 @@
           z-index: 1;
 
           &.to_animate {
-            animation: img_animate_left_to_center 2s ease-in-out forwards;
+            animation: img_animate_left_to_center 1.5s ease-in-out forwards;
           }
         }
 
@@ -120,7 +119,7 @@
           z-index: -1;
 
           &.to_animate {
-            animation: img_animate_scale 2s ease-in-out forwards;
+            animation: img_animate_scale 1.5s ease-in-out forwards;
           }
         }
       }
@@ -152,9 +151,7 @@
 
 @media screen and (max-width: 768px) {
   #investment {
-    
     .investment__container {
-    
       .investment__text-wrap {
         padding: 0;
         width: 100%;
@@ -173,11 +170,8 @@
 
 @media screen and (max-width: 280px) {
   #investment {
-    
     .investment__container {
-    
       .investment__text-wrap {
-
         .investment__text-title {
           font-size: 35px;
         }

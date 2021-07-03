@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { THRESHOLD } from "../../OptionAnimation";
 import CountUp from "react-countup";
 import LinkTo from "../LinkTo";
+import BoxTitle from "../BoxTitle";
 
 OverViewSection.propTypes = {
   overviewTitle: PropTypes.string,
@@ -48,28 +49,12 @@ function OverViewSection(props) {
       <section id="overview" ref={ref}>
         <div className="overview__container">
           <div className="overview__text">
-            <div className="overview__about-us">
-              <div
-                className={
-                  inView
-                    ? "overview__about-us-wrap to_animate"
-                    : "overview__about-us-wrap"
-                }
-              >
-                <div className="overview__about-us-box">
-                  <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
-                    <path
-                      d="M13.5629 13.5629L45 0.541196L76.4371 13.5629L89.4588 45L76.4371 76.4371L45 89.4588L13.5629 76.4371L0.541196 45L13.5629 13.5629Z"
-                      stroke="#ECE9E5"
-                    ></path>
-                  </svg>
-
-                  <span className="overview__number">01</span>
-                </div>
-
-                <span className="overview__about-us-title">About us</span>
-              </div>
-            </div>
+            <BoxTitle
+              number={"01"}
+              title={"About Us"}
+              refValue={ref}
+              inViewValue={inView}
+            />
 
             <div className="overview__title">
               <h1 className={inView ? "to_animate" : ""}>

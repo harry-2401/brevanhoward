@@ -19,7 +19,7 @@
     top: 0;
     right: 0;
 
-    background-color: rgb(246,245,242);
+    background-color: rgb(246, 245, 242);
 
     height: 140px;
     width: 50%;
@@ -50,51 +50,6 @@
     margin-left: 5%;
     margin-right: 5%;
 
-    .remark__title-wrap {
-      width: 100%;
-
-      margin-bottom: 80px;
-
-      overflow: hidden;
-
-      .remark__title {
-        display: flex;
-        align-items: center;
-
-        transform: translateY(-100%);
-
-        &.to_animate {
-          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
-        }
-        .remark__title-box {
-          position: relative;
-
-          width: 90px;
-          height: 90px;
-
-          .remark__title-box-number {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-
-            transform: translate(-50%, -50%);
-
-            color: $title__text__box;
-            font-size: 16px;
-          }
-        }
-      }
-
-      .remark__title-text {
-        color: $title__text__box;
-        font-size: 18px;
-        padding-left: 20px;
-        letter-spacing: 1px;
-
-        text-transform: uppercase;
-      }
-    }
-
     .remark__main {
       width: 100%;
 
@@ -115,7 +70,7 @@
           transform: translateY(100%);
 
           &.to_animate {
-            animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+            animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
           }
         }
       }
@@ -145,7 +100,7 @@
             margin-bottom: 15px;
 
             svg.to_animate {
-              animation: zoom_in_svg 2s ease-in-out forwards;
+              animation: zoom_in_svg 1.5s ease-in-out forwards;
             }
 
             .remark__main-box-icon {
@@ -162,7 +117,7 @@
             text-align: center;
 
             &.to_animate {
-              animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+              animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
             }
 
             .remark__main-box-text {

@@ -4,6 +4,7 @@ import { THRESHOLD } from "../../OptionAnimation";
 import LinkTo from "../LinkTo";
 import "./Culture.scss";
 import { useInView } from "react-intersection-observer";
+import BoxTitle from "../BoxTitle";
 
 CultureSection.propTypes = {
   title: PropTypes.string,
@@ -28,27 +29,12 @@ function CultureSection(props) {
     <Fragment>
       <section id="culture" ref={ref}>
         <div className="culture__container">
-          <div className="culture__title-box-wrap">
-            <div
-              className={
-                inView ? "culture__title to_animate" : "culture__title"
-              }
-            >
-              <div className="culture__title-box">
-                <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
-                  <path
-                    d="M13.5629 13.5629L45 0.541196L76.4371 13.5629L89.4588 45L76.4371 76.4371L45 89.4588L13.5629 76.4371L0.541196 45L13.5629 13.5629Z"
-                    stroke="#ECE9E5"
-                  ></path>
-                </svg>
-                <div className="culture__title-box-number">03</div>
-              </div>
-
-              <div className="culture__title-text">
-                <p>{props.title}</p>
-              </div>
-            </div>
-          </div>
+          <BoxTitle
+            number={"03"}
+            title={props.title}
+            refValue={ref}
+            inViewValue={inView}
+          />
 
           <div className="culture__main">
             <div className="culture__main-title">
@@ -92,8 +78,14 @@ function CultureSection(props) {
 
               <div className="culture__main-third-content">
                 <div className="culture__main-img-wrap">
-                  <div className={inView ? "overlay to_animate" : "overlay"}></div>
-                  <img className={inView ? "to_animate" : ""} src={props.srcImg} alt="culture" />
+                  <div
+                    className={inView ? "overlay to_animate" : "overlay"}
+                  ></div>
+                  <img
+                    className={inView ? "to_animate" : ""}
+                    src={props.srcImg}
+                    alt="culture"
+                  />
                 </div>
               </div>
             </div>

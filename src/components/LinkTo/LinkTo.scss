@@ -18,7 +18,7 @@
     font-weight: 900;
 
     &.to_animate {
-      animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+      animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
     }
   }
 
@@ -33,7 +33,7 @@
 
     background-color: $icon__next__page__color;
 
-    border-radius: 50%; 
+    border-radius: 50%;
 
     transition: 0.5s;
   }

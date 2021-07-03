@@ -1,0 +1,48 @@
+@import "../Animation";
+@import "../Variable";
+
+.title-box-wrap {
+  overflow: hidden;
+  width: 100%;
+
+  margin-bottom: 80px;
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    transform: translateY(-100%);
+    &.to_animate {
+      animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
+    }
+
+    .title-box {
+      width: 90px;
+
+      position: relative;
+
+      .title-box-number {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        color: $title__text__box;
+      }
+    }
+
+    .title-text {
+      padding-left: 20px;
+
+      font-size: 18px;
+
+      text-transform: uppercase;
+
+      color: $title__text__box;
+
+      letter-spacing: 1px;
+    }
+  }
+}

@@ -4,10 +4,12 @@ import FooterSection from "./components/FooterSection";
 import Header from "./components/Header";
 import AboutUs from "./pages/about";
 import Home from "./pages/home";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop/>
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />

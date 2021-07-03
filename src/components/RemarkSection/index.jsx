@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./Remark.scss";
 import { useInView } from "react-intersection-observer";
 import { THRESHOLD } from "../../OptionAnimation";
+import BoxTitle from "../BoxTitle";
 
 RemarkSection.propTypes = {
   title: PropTypes.string,
@@ -33,25 +34,12 @@ function RemarkSection(props) {
         </div>
 
         <div className="remark__container">
-          <div className="remark__title-wrap">
-            <div
-              className={inView ? "remark__title to_animate" : "remark__title"}
-            >
-              <div className="remark__title-box">
-                <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
-                  <path
-                    d="M13.5629 13.5629L45 0.541196L76.4371 13.5629L89.4588 45L76.4371 76.4371L45 89.4588L13.5629 76.4371L0.541196 45L13.5629 13.5629Z"
-                    stroke="#ECE9E5"
-                  ></path>
-                </svg>
-                <div className="remark__title-box-number">02</div>
-              </div>
-
-              <div className="remark__title-text">
-                <p>{props.title}</p>
-              </div>
-            </div>
-          </div>
+          <BoxTitle
+            number={"02"}
+            title={props.title}
+            refValue={ref}
+            inViewValue={inView}
+          />
 
           <div className="remark__main">
             <div className="remark__main-title">

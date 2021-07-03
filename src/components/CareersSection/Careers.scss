@@ -22,52 +22,6 @@
     display: flex;
     flex-wrap: wrap;
 
-    .careers__title-box-wrap {
-      overflow: hidden;
-      width: 100%;
-
-      margin-bottom: 80px;
-
-      .careers__title {
-        display: flex;
-        align-items: center;
-
-        transform: translateY(-100%);
-        &.to_animate {
-          animation: text_animate_bottom_to_center 2s ease-in-out forwards;
-        }
-
-        .careers__title-box {
-          width: 90px;
-
-          position: relative;
-
-          .careers__title-box-number {
-            position: absolute;
-
-            top: 50%;
-            left: 50%;
-
-            transform: translate(-50%, -50%);
-
-            color: $title__text__box;
-          }
-        }
-
-        .careers__title-text {
-          padding-left: 20px;
-
-          font-size: 18px;
-
-          text-transform: uppercase;
-
-          color: $title__text__box;
-
-          letter-spacing: 1px;
-        }
-      }
-    }
-
     .careers__main {
       display: flex;
       flex-wrap: wrap;
@@ -92,7 +46,7 @@
             transform: translateY(100%);
 
             &.to_animate {
-              animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+              animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
             }
           }
         }
@@ -107,7 +61,7 @@
 
             transform: translateY(100%);
             &.to_animate {
-              animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+              animation: text_animate_bottom_to_center 1.5s ease-in-out forwards;
             }
           }
         }
@@ -132,7 +86,7 @@
             opacity: 0;
 
             &.to_animate {
-              animation: img_animate_scale 2s ease-in-out forwards;
+              animation: img_animate_scale 1.5s ease-in-out forwards;
             }
           }
         }
@@ -155,7 +109,7 @@
               z-index: 1;
 
               &.to_animate {
-                animation: img_animate_left_to_center 2s ease-in-out forwards;
+                animation: img_animate_left_to_center 1.5s ease-in-out forwards;
               }
             }
           }
@@ -179,7 +133,7 @@
               z-index: 1;
 
               &.to_animate {
-                animation: img_animate_right_to_center 2s ease-in-out forwards;
+                animation: img_animate_right_to_center 1.5s ease-in-out forwards;
               }
             }
           }

@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import ApproachSection from "../../components/About-us/ApproachSection";
 import DetailedRemark from "../../components/About-us/DetailedRemark";
 import IntroductionSection from "../../components/About-us/IntroductionSection";
 import QuoteSection from "../../components/About-us/QuoteSection";
@@ -20,6 +21,7 @@ function AboutUs() {
         secondContent={aboutData.quoteSecondContent}
       />
       <DetailedRemark data={aboutData.detailedRemark}/>
+      <ApproachSection data={aboutData.approach}/>
     </Fragment>
   );
 }

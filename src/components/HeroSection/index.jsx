@@ -58,7 +58,7 @@ function HeroSection(props) {
             spy={true}
             smooth={true}
             hashSpy={true}
-            offset={140}
+            offset={55}
             duration={800}
             delay={0}
           >

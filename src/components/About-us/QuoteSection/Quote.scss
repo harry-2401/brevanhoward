@@ -48,7 +48,7 @@
             z-index: 1;
 
             &.to_animate {
-              animation: img_animate_right_to_center 2s ease-in-out forwards;
+              animation: img_animate_right_to_center 1.5s ease-in-out forwards;
             }
           }
 
@@ -57,7 +57,7 @@
             z-index: -1;
 
             &.to_animate {
-              animation: img_animate_scale 2s ease-in-out forwards;
+              animation: img_animate_scale 1.5s ease-in-out forwards;
             }
           }
         }
@@ -75,7 +75,7 @@
           transform: translateX(-20%);
 
           &.to_animate {
-            animation: quote_left-to-right 2s ease-in-out forwards;
+            animation: quote_left-to-right 1.5s ease-in-out forwards;
           }
 
           .quote__first-main-content-wrap {
@@ -140,7 +140,7 @@
             z-index: 1;
 
             &.to_animate {
-              animation: img_animate_right_to_center 2s ease-in-out forwards;
+              animation: img_animate_right_to_center 1.5s ease-in-out forwards;
             }
           }
 
@@ -148,7 +148,7 @@
             width: 100%;
 
             &.to_animate {
-              animation: img_animate_scale 2s ease-in-out forwards;
+              animation: img_animate_scale 1.5s ease-in-out forwards;
             }
           }
         }
@@ -170,7 +170,7 @@
           transform: translateY(20%);
 
           &.to_animate {
-            animation: quote_bottom-to-top 2s ease-in-out forwards;
+            animation: quote_bottom-to-top 1.5s ease-in-out forwards;
           }
         }
       }
