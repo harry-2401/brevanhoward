@@ -1,6 +1,10 @@
 @import "../Variable";
 
 #header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   width: 100%;
   height: $header__height;
 
@@ -10,7 +14,6 @@
   background: $primary__color;
 
   z-index: 1000;
-  position: relative;
   .header__container {
     width: 100%;
     max-width: 1400px;
@@ -121,12 +124,14 @@
       }
 
       .header__navbar-wrap {
-        .header__navbar-list {
-          .header__navbar-item {
-            margin-right: 20px;
-            .header__navbar-link {
-              font-size: 18px;
-              padding: 0;
+        .header__navbar-wrapper {
+          .header__navbar-list {
+            .header__navbar-item {
+              margin-right: 20px;
+              .header__navbar-link {
+                font-size: 18px;
+                padding: 0;
+              }
             }
           }
         }
@@ -163,7 +168,6 @@
           top: 50%;
           transform: translateY(-50%);
           right: 5%;
-
 
           cursor: pointer;
 

@@ -1,0 +1,214 @@
+@import "../../Animation";
+@import "../../Variable";
+
+#think {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding-top: 180px;
+  padding-bottom: 40px;
+
+  background: #fff;
+
+  .think__container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .think__content-wrap {
+      width: 50%;
+      padding-right: 15%;
+
+      .think__title-number-wrap {
+        width: 100%;
+        font-size: 300px;
+
+        color: $title__text__box;
+
+        overflow: hidden;
+
+        .think__title-number {
+          display: block;
+          transform: translateY(100%);
+
+          &.to_animate {
+            animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+          }
+        }
+      }
+
+      .think__title-wrap {
+        width: 100%;
+
+        margin-bottom: 40px;
+
+        color: $title__color;
+        font-size: 70px;
+        letter-spacing: 3px;
+        overflow: hidden;
+
+        .think__title {
+          display: block;
+
+          transform: translateY(100%);
+          &.to_animate {
+            animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+          }
+        }
+      }
+
+      .think__main-content-wrap {
+        width: 100%;
+
+        padding-bottom: 100px;
+
+        .think__main-content {
+          margin-bottom: 40px;
+
+          .think__main-content-title-wrap {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: $title__color;
+
+            overflow: hidden;
+
+            span {
+              display: block;
+
+              transform: translateY(100%);
+              &.to_animate {
+                animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+              }
+            }
+          }
+
+          .think__main-content-text-wrap {
+            font-size: 18px;
+            color: $text__color;
+            overflow: hidden;
+
+            p {
+              transform: translateY(100%);
+              &.to_animate {
+                animation: text_animate_bottom_to_center 2s ease-in-out forwards;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .think__img-wrap {
+      width: 50%;
+      display: flex;
+
+      align-items: flex-end;
+
+      .think__img-wrapper {
+        position: relative;
+        overflow: hidden;
+
+        .overlay {
+          position: absolute;
+          top: 0;
+
+          height: 100%;
+
+          background-color: rgb(236, 233, 229);
+
+          z-index: 1;
+
+          &.to_animate {
+            animation: img_animate_right_to_center 1.5s ease-in-out forwards;
+          }
+        }
+
+        .think__img {
+          width: 100%;
+          z-index: -1;
+
+          &.to_animate {
+            animation: img_animate_scale 1.5s ease-in-out forwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1024px) {
+  #think {
+    padding-top: 100px;
+
+    .think__container {
+      .think__content-wrap {
+        width: 50%;
+        padding-right: 5%;
+
+        .think__title-number-wrap {
+          font-size: 200px;
+        }
+
+        .think__title-wrap {
+          width: 100%;
+
+          margin-bottom: 40px;
+
+          font-size: 50px;
+        }
+
+        .think__main-content-wrap {
+          padding-bottom: 0;
+
+          .think__main-content {
+            margin-bottom: 40px;
+
+            .think__main-content-title-wrap {
+              font-size: 20px;
+            }
+
+            .think__main-content-text-wrap {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .think__img-wrap {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  #think {
+    padding-top: 100px;
+
+    .think__container {
+      .think__content-wrap {
+        width: 100%;
+        padding-right: 0;
+
+        .think__title-number-wrap {
+          font-size: 100px;
+        }
+
+        .think__title-wrap {
+          width: 100%;
+
+          font-size: 35px;
+        }
+      }
+
+      .think__img-wrap {
+        width: 100%;
+      }
+    }
+  }
+}

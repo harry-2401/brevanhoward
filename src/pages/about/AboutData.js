@@ -3,6 +3,11 @@ import srcQuoteFirstImg from "../../img/quote1.jpg";
 import srcQuoteSecondImg from "../../img/quote2.jpg";
 import srcDetailedRemarkImg from "../../img/remarkBackground.jpg";
 import srcOpproachImg from "../../img/opproach.jpg";
+import srcThinkImg from "../../img/think.jpg";
+import firstStructuring from "../../img/firstStructuring.jpg";
+import secondStructuring from "../../img/secondStructuring.jpg";
+import firstManagement from "../../img/firstManagement.jpg";
+import secondManagement from "../../img/secondManagement.jpg";
 
 const aboutData = {
   //introduction data
@@ -188,6 +193,86 @@ const aboutData = {
         },
       ],
     },
+  },
+  //think section
+  think: {
+    titleNumber: "01",
+    title: ["Macro", "Thinking"],
+    srcImg: srcThinkImg,
+    mainData: [
+      {
+        id: "thinkSection1",
+        title: "Research & Analysis",
+        text: "We leverage our global network of independent and critical thinkers to support our research process.",
+      },
+      {
+        id: "thinkSection2",
+        title: "Debate & Challenge",
+        text: "We encourage information flow and transparency throughout the firm, maintaining a community of creative, free-thinking investment professionals where original and differentiated thought is encouraged, and views are challenged.",
+      },
+      {
+        id: "thinkSection3",
+        title: "Non-Consensus",
+        text: "We believe in the power and value of contrarian thought. Intellectual humility, flexibility and imagination are critical to long term success.",
+      },
+    ],
+  },
+  //structuring data section
+  structuring: {
+    titleNumber: "02",
+    title: ["Trade", "Structuring"],
+    srcImg: [firstStructuring, secondStructuring],
+    text: [
+      {
+        id: "text01",
+        content:
+          "Structuring trades with inherent asymmetric P&L potential allows us to better understand the probabilities of different outcomes as priced by the markets and create attractive risk-reward outcomes.",
+      },
+      {
+        id: "text02",
+        content:
+          "We create asymmetry using options and option-like trading structures, as well as through the disciplined use of stop losses.",
+      },
+      {
+        id: "text03",
+        content:
+          "Views on optimal trade structuring are discussed and debated alongside market views. Team members are encouraged to leverage each other’s particular skills in trade structuring across various markets in order to enhance outcomes.",
+      },
+    ],
+  },
+
+  //management data section
+  management: {
+    titleNumber: "03",
+    title: ["Risk", "Management"],
+    srcImg: [firstManagement, secondManagement],
+    mainData: [
+      {
+        id: "management1",
+        title: "Art & Science",
+        text: "Risk management is a combination of art and science that is managed both quantitatively and qualitatively. We apply a rigorous, and often forensic, focus on detail.",
+      },
+      {
+        id: "management2",
+        title: "Not Simply a Control Function",
+        text: "Risk does not act in a silo and is instead integral to each portfolio manager's investment process and portfolio construction. Each portfolio manager has a bespoke risk mandate and a designated risk manager, assigned to work in close collaboration.",
+      },
+      {
+        id: "management3",
+        title: "Focus on Stress Tests & Scenario Analysis",
+        text: "Our proprietary bank of stress tests have been developed over almost two decades and is continuously updated. These tools allow us to examine tail risks and mitigate potential loss scenarios.",
+      },
+    ],
+  },
+  //strate data section
+  strate: {
+    title: "investment strategies",
+    mainTitle: "Investment Opportunities",
+    mainText: [
+      "Our investment strategies address a wide range of portfolio needs, actively investing and pursuing opportunities across a broad range of asset classes, instruments, and geographies globally.",
+      "The product suite includes multi-portfolio manager strategies, single-portfolio manager strategies and thematic co-investment opportunities.",
+      "For further information on all of our strategies, please log in below or",
+    ],
   },
 };
 

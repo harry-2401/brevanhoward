@@ -13,8 +13,6 @@ BoxTitle.PropsDefault = {
 };
 
 function BoxTitle(props) {
-  
-
   return (
     <div className="title-box-wrap" ref={props.refValue}>
       <div className={props.inViewValue ? "title to_animate" : "title"}>

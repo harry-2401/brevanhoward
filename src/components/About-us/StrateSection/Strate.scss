@@ -1,0 +1,18 @@
+@import "../../Animation";
+@import "../../Variable";
+
+#strate {
+  width: 100%;
+
+  background-color: $primary__color;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 180px;
+  padding-bottom: 40px;
+
+  .strate__container {
+    
+  }
+}
