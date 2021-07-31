@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import ApproachSection from "../../components/About-us/ApproachSection";
+import CultureSection from "../../components/About-us/CultureSection";
 import DetailedRemark from "../../components/About-us/DetailedRemark";
 import IntroductionSection from "../../components/About-us/IntroductionSection";
 import ManagementSection from "../../components/About-us/ManagementSection";
@@ -30,6 +31,7 @@ function AboutUs() {
       <StructuringSection data={aboutData.structuring}/>
       <ManagementSection data={aboutData.management}/>
       <StrateSection data={aboutData.strate}/>
+      <CultureSection data={aboutData.culture}/>
     </Fragment>
   );
 }

@@ -13,6 +13,165 @@
   padding-bottom: 40px;
 
   .strate__container {
-    
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 5%;
+
+    .strate__main-title-wrap {
+      width: 100%;
+
+      font-size: 70px;
+      color: #fff;
+      letter-spacing: 3px;
+
+      margin-bottom: 80px;
+
+      overflow: hidden;
+      span {
+        display: block;
+        transform: translateX(-100%);
+
+        &.to_animate {
+          animation: text_animate_left_to_center 1.5s ease-in-out forwards;
+        }
+      }
+    }
+
+    .strate__main-text-wrap {
+      display: flex;
+      flex-wrap: wrap;
+
+      .strate__main-first-text-wrap {
+        width: 50%;
+
+        .strate__text-wrap {
+          color: #fff;
+          font-size: 20px;
+          letter-spacing: 1px;
+          line-height: 1.7;
+
+          margin-bottom: 40px;
+          margin-right: 20%;
+          overflow: hidden;
+
+          p {
+            transform: translateX(-100%);
+            &.to_animate {
+              animation: text_animate_left_to_center 1.5s ease-in-out forwards;
+            }
+          }
+        }
+      }
+
+      .strate__main-second-text-wrap {
+        width: 50%;
+
+        .strate__text-wrap {
+          color: #fff;
+          font-size: 20px;
+          letter-spacing: 1px;
+          line-height: 1.7;
+
+          margin-bottom: 40px;
+          margin-left: 20%;
+          overflow: hidden;
+
+          p {
+            transform: translateX(-100%);
+
+            &.to_animate {
+              animation: text_animate_left_to_center 1.5s ease-in-out forwards;
+            }
+          }
+
+          .strate__text-contact {
+            text-decoration: none;
+            color: #fff;
+
+            border-bottom: 1px solid #fff;
+
+            transition: 0.5s;
+
+            &:hover {
+              border-bottom: none;
+            }
+          }
+        }
+
+        .linkTo-wrap {
+          margin-left: 20%;
+          .linkTo-icon {
+            color: #000;
+          }
+
+          &:hover .linkTo-icon {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1024px) {
+  #strate {
+    padding-top: 100px;
+
+    .strate__container {
+      .strate__main-title-wrap {
+        font-size: 50px;
+      }
+
+      .strate__main-text-wrap {
+        .strate__main-first-text-wrap {
+          width: 50%;
+
+          .strate__text-wrap {
+            font-size: 18px;
+          }
+        }
+
+        .strate__main-second-text-wrap {
+          .strate__text-wrap {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:768px) {
+  #strate {
+    .strate__container {
+      .strate__main-title-wrap {
+        font-size: 35px;
+      }
+
+      .strate__main-text-wrap {
+        .strate__main-first-text-wrap {
+          width: 100%;
+
+          .strate__text-wrap {
+            font-size: 18px;
+
+            margin-right: 0;
+          }
+        }
+
+        .strate__main-second-text-wrap {
+          width: 100%;
+
+          .strate__text-wrap {
+            margin-left: 0;
+          }
+          .linkTo-wrap {
+            margin: 0;
+          }
+        }
+      }
+    }
   }
 }

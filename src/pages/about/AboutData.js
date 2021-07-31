@@ -8,6 +8,7 @@ import firstStructuring from "../../img/firstStructuring.jpg";
 import secondStructuring from "../../img/secondStructuring.jpg";
 import firstManagement from "../../img/firstManagement.jpg";
 import secondManagement from "../../img/secondManagement.jpg";
+import srcNextCultureImg from "../../img/nextculture.jpg";
 
 const aboutData = {
   //introduction data
@@ -271,8 +272,14 @@ const aboutData = {
     mainText: [
       "Our investment strategies address a wide range of portfolio needs, actively investing and pursuing opportunities across a broad range of asset classes, instruments, and geographies globally.",
       "The product suite includes multi-portfolio manager strategies, single-portfolio manager strategies and thematic co-investment opportunities.",
-      "For further information on all of our strategies, please log in below or",
+      "For further information on all of our strategies, please log in below or ",
     ],
+  },
+
+  //culture data section
+  culture: {
+    title: "Culture",
+    srcImg: srcNextCultureImg,
   },
 };
 
